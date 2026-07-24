@@ -9,4 +9,5 @@ contains the weights calculated during training after 90% accuracy.
 the drawing window of 28x28 is created here which calculates the drawn number using __mnis_model_weights.npz__, and displays it.
 ## quantize.py
 since the mnist dataset is created using real photos, the arbitrary pixel values get quantized into the ones used in the drawing window.
+### The mnist data used here _train.csv_ can be download from [Keggle](https://www.kaggle.com/competitions/digit-recognizer/data?select=train.csv)
 ***
