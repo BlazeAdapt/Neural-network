@@ -1,6 +1,6 @@
 # Neural Network
 
-My first neural network, built from scratch to recognize handwritten digits.
+My first neural network, built from scratch without libraries like `pytorch` or `tensorflow` to recognize handwritten digits.
 
 It takes a **28×28 grayscale image** as input and predicts which digit from `0–9` was drawn.
 
