@@ -1,13 +1,49 @@
-# Neural-network
-My first neural network that inputs a 28x28 greyscale image and guesses the hand-drawn number in it.
-***
-## making ai.py
-It is trained on the mnist dataset which has over 40,000+ images, calculates the best fit weights for the two layers containing 64 and 32 neurons respectively.
-## mnis_model_weights.npz
-contains the weights calculated during training after 90% accuracy.
-## using ai.py
-the drawing window of 28x28 is created here which calculates the drawn number using __mnis_model_weights.npz__, and displays it.
-## quantize.py
-since the mnist dataset is created using real photos, the arbitrary pixel values get quantized into the ones used in the drawing window.
-### The mnist data used here _train.csv_ can be download from [Keggle](https://www.kaggle.com/competitions/digit-recognizer/data?select=train.csv)
-***
+# Neural Network
+
+My first neural network, built from scratch to recognize handwritten digits.
+
+It takes a **28×28 grayscale image** as input and predicts which digit from `0–9` was drawn.
+
+The network has two hidden layers with **64 and 32 neurons**, and was trained on the MNIST dataset. The current saved weights reach around **90% accuracy**.
+
+## How it works
+
+```text
+28 × 28 image
+      ↓
+   784 inputs
+      ↓
+  64 neurons
+      ↓
+  32 neurons
+      ↓
+  10 outputs
+      ↓
+ Predicted digit
+```
+
+The network and training process are implemented manually rather than using a machine-learning framework.
+
+## Files
+
+```text
+Neural-network/
+├── making ai.py             # Creates and trains the network
+├── using ai.py              # Draw a digit and get a prediction
+├── quantize.py              # Converts image values to the required format
+└── mnist_model_weights.npz  # Trained model weights
+```
+
+`using ai.py` provides a small **28×28 drawing window** where you can draw a digit and have the network classify it.
+
+## Dataset
+
+The network is trained using the **MNIST handwritten digit dataset**.
+
+The training data used by the project can be obtained from Kaggle.
+
+## Why I made it
+
+This was one of my first projects where I actually implemented and trained a neural network myself, rather than just using a machine-learning library.
+
+It was mainly a way to understand what is happening behind the usual `model.fit()` approach.
